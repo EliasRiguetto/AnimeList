@@ -15,6 +15,11 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  display: block;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -22,6 +27,7 @@ img {
 
 .container {
   max-width: 1270px;
+  margin: 0 auto;
 }
 
 .flex {
@@ -31,32 +37,135 @@ img {
 
 .btn {
   background-color: #1CBAE1;
-  color: #EDFBFF;
+  color: #dddada;
   border: none;
   height: 40px;
   line-height: 0;
+  cursor: pointer;
   font-size: 1em;
   border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+.btn:hover {
+  background-color: #51c6e4;
 }
 
 p {
-  color: #EDFBFF;
+  color: #D9D9D9;
+}
+
+a {
+  font-family: "Quicksand";
 }
 
 .input {
-  border: solid 2px #EDFBFF;
+  border: solid 1px #D9D9D9;
   border-radius: 4px;
+  background: #1A1A1A;
   height: 40px;
   display: flex;
   align-items: center;
-  position: relative;
+  width: 100%;
+  font-family: "Quicksand";
+  text-indent: 40px;
+  font-size: 1em;
+  color: #D9D9D9;
 }
-.input ::placeholder {
-  text-indent: 72px;
-  color: #EDFBFF;
+.input:focus {
+  outline: #D9D9D9 solid 1px;
+  font-weight: 500;
+}
+
+.background {
+  background-image: url("./../../../img/bg.webp");
+  background-position: bottom;
+  background-size: cover;
+}
+
+#header {
+  background: #1A1A1A;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+#header nav {
+  padding: 28px 0;
+}
+#header nav .logo img {
+  width: 170px;
+  height: 32px;
+}
+
+#main {
+  min-height: calc(100vh - 88px);
+  display: flex;
+  align-items: center;
+}
+
+.formulario {
+  width: 346px;
+  padding: 20px 0;
+}
+.formulario .btn-options {
+  display: flex;
+  gap: 12px;
+}
+.formulario .btn-options .dark {
+  background-color: #646464;
+}
+.formulario .btn-options .dark:hover {
+  background-color: #8C8C8C;
+}
+
+#login, #cadastrar {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1A1A1A;
+  color: #D9D9D9;
+  border-radius: 4px;
+  padding: 20px;
+  gap: 20px;
+}
+#login h1, #cadastrar h1 {
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 2.618em;
+  padding: 20px;
+}
+#login .form-group, #cadastrar .form-group {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#login .form-group img, #cadastrar .form-group img {
+  width: 24px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+#login input::placeholder, #cadastrar input::placeholder {
+  color: #D9D9D9;
+}
+#login a, #cadastrar a {
+  font-family: "Quicksand";
+  color: #1CBAE1;
+  padding-bottom: 20px;
+}
+#login label, #cadastrar label {
+  font-size: 1em;
+  color: #D9D9D9;
+  font-family: "Quicksand";
+}
+#login .radio label, #cadastrar .radio label {
+  font-size: 0.718em;
+}
+
+#cadastrar {
+  padding: 40px 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

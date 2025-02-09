@@ -1,0 +1,51 @@
+#login, #cadastrar{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $gray;
+  color: $primary-color-1;
+  border-radius: $border;
+  padding: 20px;
+  gap: 20px;
+  h1{
+    font-family: $font2;
+    font-weight: 400;
+    font-size: $font-big;
+    padding: 20px;
+  }
+  .form-group{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    img{
+      width: 24px;
+      position: absolute;
+      top: 8px;
+      left: 8px;
+    }
+  }
+  input::placeholder{
+    color: $primary-color-1;
+  }
+  a{
+    font-family: $font2;
+    color: $primary-color;
+    padding-bottom: 20px;
+  }
+  label{
+    font-size: $font-normal;
+    color: $primary-color-1;
+    font-family: $font2;
+  }
+  .radio{
+    label{
+      font-size: $font-small;
+    }
+  }
+
+}
+#cadastrar{
+  padding: 40px 20px;
+}
