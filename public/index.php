@@ -22,7 +22,7 @@
     <section class="container formulario">
       <div class="flex btn-options">
         <a href="#" class="btn">Entrar</a>
-        <a href="cadastrar.html" class="btn dark">Cadastrar</a>
+        <a href="cadastrar.php" class="btn dark">Cadastrar</a>
       </div>
       <form action="" id="login">
         <h1>Bem-Vindo!</h1>

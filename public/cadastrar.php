@@ -21,7 +21,7 @@
   <main class="background" id="main">
     <section class="container formulario">
       <div class="flex btn-options">
-        <a href="index.html" class="btn dark">Entrar</a>
+        <a href="index.php" class="btn dark">Entrar</a>
         <a href="#" class="btn">Cadastrar</a>
       </div>
       <form action="" id="cadastrar">
@@ -35,7 +35,7 @@
             <input type="radio" name="sexo" id="masc" checked>
             <label for="masc">Masculino</label>
             <input type="radio" name="sexo" id="fem">
-            <label for="fem">feminino</label>
+            <label for="fem">Feminino</label>
           </div>
         </div>
         <div class="form-group">

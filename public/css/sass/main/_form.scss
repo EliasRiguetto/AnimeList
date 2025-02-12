@@ -19,6 +19,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+
     img{
       width: 24px;
       position: absolute;
@@ -40,6 +41,8 @@
     font-family: $font2;
   }
   .radio{
+    display: flex;
+    gap: 8px;
     label{
       font-size: $font-small;
     }
@@ -48,4 +51,18 @@
 }
 #cadastrar{
   padding: 40px 20px;
+}
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $gray-1;
+  transition: background-color 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+input[type="radio"]:checked {
+  background-color: $primary-color; 
 }

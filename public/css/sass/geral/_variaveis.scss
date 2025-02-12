@@ -38,6 +38,7 @@ $border: 4px;
   height: 40px;
   line-height: 0;
   cursor: pointer;
+  user-select: none;
   font-size: $font-normal;
   border-radius: $border;
   display: flex;
