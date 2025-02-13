@@ -1,18 +1,21 @@
-#main{
+#main {
   min-height: calc(100vh - 88px);
   display: flex;
   align-items: center;
-
 }
-.formulario{
+
+.formulario {
   width: 346px;
   padding: 20px 0;
-  .btn-options{
+
+  .btn-options {
     display: flex;
     gap: 12px;
-    .dark{
+
+    .dark {
       background-color: $gray-3;
-      &:hover{
+
+      &:hover {
         background-color: $gray-2;
       }
     }

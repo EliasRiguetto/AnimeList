@@ -1,0 +1,12 @@
+footer {
+  padding: 60px;
+  background: $gray;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    font-family: $font2;
+    color: $white;
+  }
+}

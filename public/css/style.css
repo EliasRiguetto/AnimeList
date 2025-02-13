@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
 * {
@@ -33,6 +34,7 @@ img {
 .flex {
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 
 .btn {
@@ -82,9 +84,23 @@ a {
 
 .background {
   background-image: url("../../public/img/bg.webp");
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: repeat-y;
+  background-position: center;
+  background-repeat: repeat;
+}
+
+.form-select {
+  background: #B1B1B1;
+  color: #1A1A1A;
+  border: none;
+  border-radius: 4px;
+  font-family: "Quicksand";
+  padding: 6px 8px;
+}
+.form-select option {
+  font-family: "Quicksand";
+  padding: 12px;
+  color: #1A1A1A;
+  font-size: 16px;
 }
 
 .header-admin {
@@ -287,52 +303,131 @@ input[type=radio]:checked {
   background-color: #1A1A1A;
   margin-top: 60px;
   border-radius: 4px;
+  margin-bottom: 40px;
 }
 #animes .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 380px);
+  grid-template-rows: repeat(4, 348px);
   gap: 40px;
   padding: 40px;
 }
 #animes .grid .grid-item {
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: space-between;
+  gap: 40px;
 }
 #animes .grid .grid-item .item-img {
-  height: 367.5px;
+  max-height: 348px;
   width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #B1B1B1;
+  border-radius: 4px;
 }
-#animes .grid .grid-item .item-title {
+#animes .grid .grid-item .image {
+  transition: opacity 0.3s ease;
+  border-radius: 4px;
+}
+#animes .grid .grid-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#animes .grid .grid-item .text {
+  font-family: "Quicksand";
   color: #ffffff;
-  font-size: 0.718em;
-  background: #8C8C8C;
-  width: 100%;
-  height: 100%;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+}
+#animes .grid .grid-item .item-img:hover .overlay {
+  opacity: 1;
+}
+#animes .grid .grid-item .item-img:hover .image {
+  opacity: 0.3;
 }
 
 .header-anime {
   padding: 60px 40px 0 40px;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  font-family: "Quicksand";
+  color: #ffffff;
 }
 .header-anime h1 {
-  font-family: "Quicksand";
   font-weight: 600;
   font-size: 2.618em;
-  color: #ffffff;
 }
 .header-anime h1 span {
   background: #B1B1B1;
   color: #646464;
   padding: 4px 12px;
   border-radius: 4px;
+}
+.header-anime p {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.pagination a {
+  padding: 8px 12px;
+  margin: 0 4px;
+  background-color: #1CBAE1;
+  color: #ffffff;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  font-weight: 500;
+}
+
+.pagination a:hover {
+  background-color: #51c6e4;
+}
+
+.pagination .page {
+  background-color: #8C8C8C;
+  color: #1A1A1A;
+}
+
+.pagination .page:hover {
+  background-color: #D9D9D9;
+}
+
+.pagination .prev,
+.pagination .next {
+  font-weight: bold;
+}
+
+/* Estilos para quando a página atual estiver ativa */
+.pagination .active {
+  background-color: #0056b3;
+  color: white;
+}
+
+footer {
+  padding: 60px;
+  background: #1A1A1A;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+footer p {
+  font-family: "Quicksand";
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */

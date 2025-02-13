@@ -12,8 +12,7 @@
             </form>
             <div class="user flex">
                 <li data-dropdown class="flex">
-                    <a href="#"> Usuário </i>
-                    </a>
+                    <a href="#"> Usuário </a>
                     <img src="./../icon/arrow.svg" alt="">
                     <ul class="dropdown">
                         <li>
