@@ -26,7 +26,7 @@ img {
 }
 
 .container {
-  max-width: 1270px;
+  width: 1270px;
   margin: 0 auto;
 }
 
@@ -37,11 +37,12 @@ img {
 
 .btn {
   background-color: #1CBAE1;
-  color: #dddada;
+  color: #ffffff;
   border: none;
   height: 40px;
   line-height: 0;
   cursor: pointer;
+  user-select: none;
   font-size: 1em;
   border-radius: 4px;
   display: flex;
@@ -80,9 +81,94 @@ a {
 }
 
 .background {
-  background-image: url("./../../../img/bg.webp");
+  background-image: url("../../public/img/bg.webp");
   background-position: bottom;
   background-size: cover;
+  background-repeat: repeat-y;
+}
+
+.header-admin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-admin form {
+  position: relative;
+}
+.header-admin form img {
+  width: 24px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+.header-admin .user {
+  padding-left: 12px;
+  font-family: "Quicksand";
+}
+.header-admin .user a {
+  color: #ffffff;
+}
+
+[data-dropdown] {
+  position: relative;
+}
+
+[data-dropdown] .dropdown {
+  display: none;
+}
+
+[data-dropdown]:hover .dropdown,
+[data-dropdown].active .dropdown {
+  display: block;
+  animation: show-up 0.3s forwards;
+}
+
+@keyframes show-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 24px;
+  right: 4px;
+  width: max-content;
+  background: #646464;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 200;
+  border-radius: 4px;
+  border-top: 4px solid #B1B1B1;
+}
+.dropdown li {
+  padding: 12px;
+  border-bottom: 1px solid #646464;
+}
+.dropdown li a {
+  color: #ffffff;
+}
+
+.dropdown::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  width: 0px;
+  right: 0px;
+  height: 0px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #B1B1B1;
+}
+
+.dropdown li:hover {
+  background-color: #8C8C8C;
 }
 
 #header {
@@ -118,7 +204,8 @@ a {
   background-color: #8C8C8C;
 }
 
-#login, #cadastrar {
+#login,
+#cadastrar {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -129,42 +216,50 @@ a {
   padding: 20px;
   gap: 20px;
 }
-#login h1, #cadastrar h1 {
+#login h1,
+#cadastrar h1 {
   font-family: "Quicksand";
   font-weight: 400;
   font-size: 2.618em;
   padding: 20px;
 }
-#login .form-group, #cadastrar .form-group {
+#login .form-group,
+#cadastrar .form-group {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-#login .form-group img, #cadastrar .form-group img {
+#login .form-group img,
+#cadastrar .form-group img {
   width: 24px;
   position: absolute;
   top: 8px;
   left: 8px;
 }
-#login input::placeholder, #cadastrar input::placeholder {
+#login input::placeholder,
+#cadastrar input::placeholder {
   color: #D9D9D9;
 }
-#login a, #cadastrar a {
+#login a,
+#cadastrar a {
   font-family: "Quicksand";
   color: #1CBAE1;
   padding-bottom: 20px;
 }
-#login label, #cadastrar label {
+#login label,
+#cadastrar label {
   font-size: 1em;
   color: #D9D9D9;
   font-family: "Quicksand";
 }
-#login .radio, #cadastrar .radio {
+#login .radio,
+#cadastrar .radio {
   display: flex;
   gap: 8px;
 }
-#login .radio label, #cadastrar .radio label {
+#login .radio label,
+#cadastrar .radio label {
   font-size: 0.718em;
 }
 
@@ -186,6 +281,58 @@ input[type=radio] {
 
 input[type=radio]:checked {
   background-color: #1CBAE1;
+}
+
+#animes {
+  background-color: #1A1A1A;
+  margin-top: 60px;
+  border-radius: 4px;
+}
+#animes .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 380px);
+  gap: 40px;
+  padding: 40px;
+}
+#animes .grid .grid-item {
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
+#animes .grid .grid-item .item-img {
+  height: 367.5px;
+  width: 100%;
+}
+#animes .grid .grid-item .item-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 0.718em;
+  background: #8C8C8C;
+  width: 100%;
+  height: 100%;
+}
+
+.header-anime {
+  padding: 60px 40px 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-anime h1 {
+  font-family: "Quicksand";
+  font-weight: 600;
+  font-size: 2.618em;
+  color: #ffffff;
+}
+.header-anime h1 span {
+  background: #B1B1B1;
+  color: #646464;
+  padding: 4px 12px;
+  border-radius: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */
