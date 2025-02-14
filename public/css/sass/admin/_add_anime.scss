@@ -1,0 +1,52 @@
+#add-anime {
+  background-color: $gray;
+  margin-top: 60px;
+  border-radius: $border;
+  margin-bottom: 40px;
+  padding: 40px;
+  width: 50%;
+  font-family: $font2;
+
+  h1 {
+    color: $primary-color-1;
+    font-size: $font-big;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    color: $white;
+    margin-bottom: 4px;
+    color: $primary-color-1;
+  }
+
+  .input {
+    text-indent: 8px;
+    color: $gray-2;
+  }
+
+  .form-group {
+    padding: 8px 0;
+  }
+
+  select {
+    height: 40px;
+    width: 100%;
+    padding: 0 4px;
+  }
+
+  .flex {
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .flex div {
+    width: 50%;
+  }
+}
+
+#anime-description {
+  resize: none;
+  height: 160px;
+  margin-bottom: 20px;
+}

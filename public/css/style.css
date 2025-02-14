@@ -65,8 +65,8 @@ a {
 }
 
 .input {
-  border: solid 1px #D9D9D9;
-  border-radius: 4px;
+  border: none;
+  border-bottom: solid 1px #D9D9D9;
   background: #1A1A1A;
   height: 40px;
   display: flex;
@@ -78,8 +78,9 @@ a {
   color: #D9D9D9;
 }
 .input:focus {
-  outline: #D9D9D9 solid 1px;
+  outline: none;
   font-weight: 500;
+  border-bottom: 2px solid #D9D9D9;
 }
 
 .background {
@@ -377,6 +378,73 @@ input[type=radio]:checked {
   font-weight: 500;
 }
 
+#anime {
+  background-color: #1A1A1A;
+  margin-top: 60px;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  padding: 40px;
+}
+
+.info-anime {
+  display: flex;
+  gap: 20px;
+}
+.info-anime .anime-img {
+  width: 320px;
+}
+
+.anime-title {
+  font-family: "Quicksand";
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.anime-title .title-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.anime-title .title-name p {
+  font-size: 2.618em;
+  padding-right: 12px;
+  font-weight: 500;
+}
+.anime-title img {
+  width: 36px;
+}
+.anime-title .title-name-english p {
+  font-size: 1.5em;
+  height: 24px;
+}
+.anime-title .anime-situation {
+  border: 1px solid #FF8C21;
+  padding: 4px 8px;
+  border-radius: 4px;
+  width: fit-content;
+}
+.anime-title .anime-situation p {
+  color: #FF8C21;
+}
+
+.my-informations {
+  color: #D9D9D9;
+}
+.my-informations li {
+  padding: 8px 0;
+  font-weight: 500;
+}
+.my-informations li span {
+  font-weight: 300;
+  color: #8C8C8C;
+}
+
+.anime-description p {
+  margin-top: 20px;
+  font-size: 1em;
+}
+
 .pagination {
   display: flex;
   align-items: center;
@@ -416,6 +484,52 @@ input[type=radio]:checked {
 .pagination .active {
   background-color: #0056b3;
   color: white;
+}
+
+#add-anime {
+  background-color: #1A1A1A;
+  margin-top: 60px;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  padding: 40px;
+  width: 50%;
+  font-family: "Quicksand";
+}
+#add-anime h1 {
+  color: #D9D9D9;
+  font-size: 2.618em;
+  margin-bottom: 20px;
+}
+#add-anime label {
+  display: block;
+  color: #ffffff;
+  margin-bottom: 4px;
+  color: #D9D9D9;
+}
+#add-anime .input {
+  text-indent: 8px;
+  color: #8C8C8C;
+}
+#add-anime .form-group {
+  padding: 8px 0;
+}
+#add-anime select {
+  height: 40px;
+  width: 100%;
+  padding: 0 4px;
+}
+#add-anime .flex {
+  justify-content: space-between;
+  gap: 20px;
+}
+#add-anime .flex div {
+  width: 50%;
+}
+
+#anime-description {
+  resize: none;
+  height: 160px;
+  margin-bottom: 20px;
 }
 
 footer {

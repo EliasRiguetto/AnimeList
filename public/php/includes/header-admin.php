@@ -1,7 +1,7 @@
 <header id="header">
     <nav class="container header-admin">
         <div class="logo">
-            <a href="#">
+            <a href="../../public/usuario/search_anime.php">
                 <img src="../../public/icon/logo.svg" alt="Logo do Site">
             </a>
         </div>
@@ -16,10 +16,7 @@
                     <img src="./../icon/arrow.svg" alt="">
                     <ul class="dropdown">
                         <li>
-                            <a href="sobre/quem_somos.html">Adicionar anime</a>
-                        </li>
-                        <li>
-                            <a href="sobre/nosso_trabalho.html">Adicionar usuário</a>
+                            <a href="../../public/usuario/add_anime.php">Adicionar anime</a>
                         </li>
                         <li>
                             <a href="sobre/regularizacao.html">Alterar perfil</a>

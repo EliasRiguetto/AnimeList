@@ -68,8 +68,8 @@ a {
 $shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.3);
 
 .input {
-  border: solid 1px $primary-color-1;
-  border-radius: $border;
+  border: none;
+  border-bottom: solid 1px $primary-color-1;
   background: $gray;
   height: 40px;
   display: flex;
@@ -81,8 +81,9 @@ $shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.3);
   color: $primary-color-1;
 
   &:focus {
-    outline: $primary-color-1 solid 1px;
+    outline: none;
     font-weight: 500;
+    border-bottom: 2px solid $primary-color-1;
   }
 
 }

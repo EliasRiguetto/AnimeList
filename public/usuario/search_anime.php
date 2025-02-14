@@ -38,7 +38,7 @@
 
       </div>
       <div class="grid">
-        <a href="" class="grid-item">
+        <a href="anime.php" class="grid-item">
           <div class="item-img">
             <img src="https://angelotti.wordpress.com/wp-content/uploads/2023/09/one-piece-capa-anime-001-luffy-nami-zoro-usopp-sanji.webp?w=774" alt="" srcset="" class="image">
             <div class="overlay">
