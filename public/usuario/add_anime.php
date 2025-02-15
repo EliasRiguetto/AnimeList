@@ -40,7 +40,7 @@
               <option value="">Acompanhando</option>
               <option value="">Assistir depois</option>
               <option value="">Concluído</option>
-              <option value="">Assistindo</option>
+              <option value="">Desisti</option>
             </select>
           </div>
         </div>
@@ -52,10 +52,30 @@
           <div class="form-group">
             <label for="">Temporada</label>
             <select name="" id="">
-              <option value="">Acompanhando</option>
-              <option value="">Assistir depois</option>
-              <option value="">Concluído</option>
-              <option value="">Assistindo</option>
+              <option value="">Sem temporada</option>
+              <option value="">1º Temporada</option>
+              <option value="">2º Temporada</option>
+              <option value="">3º Temporada</option>
+              <option value="">4º Temporada</option>
+              <option value="">5º Temporada</option>
+              <option value="">6º Temporada</option>
+              <option value="">7º Temporada</option>
+              <option value="">8º Temporada</option>
+              <option value="">9º Temporada</option>
+              <option value="">10º Temporada</option>
+              <option value="">11º Temporada</option>
+              <option value="">12º Temporada</option>
+              <option value="">13º Temporada</option>
+              <option value="">14º Temporada</option>
+              <option value="">15º Temporada</option>
+              <option value="">16º Temporada</option>
+              <option value="">17º Temporada</option>
+              <option value="">18º Temporada</option>
+              <option value="">19º Temporada</option>
+              <option value="">20º Temporada</option>
+              <option value="">21º Temporada</option>
+              <option value="">22º Temporada</option>
+              <option value="">23º Temporada</option>
             </select>
           </div>
         </div>

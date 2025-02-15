@@ -443,6 +443,7 @@ input[type=radio]:checked {
 .anime-description p {
   margin-top: 20px;
   font-size: 1em;
+  font-family: "Poppins";
 }
 
 .pagination {
@@ -530,6 +531,46 @@ input[type=radio]:checked {
   resize: none;
   height: 160px;
   margin-bottom: 20px;
+}
+
+#edit-anime {
+  background-color: #1A1A1A;
+  margin-top: 60px;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  padding: 40px;
+  font-family: "Quicksand";
+}
+#edit-anime .input {
+  display: inline-block;
+  width: fit-content;
+  text-indent: 8px;
+  height: auto;
+  border: none;
+  background: #302e2e;
+}
+#edit-anime select {
+  background: #1A1A1A;
+  color: #8C8C8C;
+  border: none;
+  background: #302e2e;
+}
+#edit-anime .title-name input {
+  font-size: 1.5em;
+}
+#edit-anime .anime-situation select {
+  color: #8C8C8C;
+}
+#edit-anime .anime-description textarea {
+  margin-top: 20px;
+  font-size: 1em;
+  resize: none;
+  width: 100%;
+  height: 200px;
+  border: none;
+  color: #D9D9D9;
+  font-family: "Poppins";
+  background: #302e2e;
 }
 
 footer {

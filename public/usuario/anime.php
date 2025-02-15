@@ -22,7 +22,7 @@
           <div class="title-name">
             <div class="flex">
               <p>One piece</p>
-              <a href="">
+              <a href="../../public/usuario/edit_anime.php">
                 <img src="./../icon/edit.svg" alt="" title="Editar">
               </a>
             </div>
