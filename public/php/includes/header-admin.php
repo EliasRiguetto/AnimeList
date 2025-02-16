@@ -19,7 +19,7 @@
                             <a href="../../public/usuario/add_anime.php">Adicionar anime</a>
                         </li>
                         <li>
-                            <a href="sobre/regularizacao.html">Alterar perfil</a>
+                            <a href="../../public/usuario/perfil.php">Alterar perfil</a>
                         </li>
                         <li>
                             <a href="sobre/regularizacao.html">Sair</a>

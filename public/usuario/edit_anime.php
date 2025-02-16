@@ -14,6 +14,9 @@
   ?>
   <main class="background" id="main">
     <section class="container" id="edit-anime">
+      <div id="delete">
+        <img src="./../icon/delete.svg" alt="delete" title="Deletar Anime">
+      </div>
       <div class="info-anime">
         <div class="anime-img">
           <img src="https://angelotti.wordpress.com/wp-content/uploads/2023/09/one-piece-capa-anime-001-luffy-nami-zoro-usopp-sanji.webp?w=774" alt="" srcset="" class="image">
@@ -28,7 +31,7 @@
               <img src="./../icon/star.svg" alt="">
               <img src="./../icon/star.svg" alt="">
               <img src="./../icon/star.svg" alt="">
-              <input type="number" min="1" max="5" class="input">
+              <input type="number" min="1" max="5" class="input" value="5">
             </div>
 
 

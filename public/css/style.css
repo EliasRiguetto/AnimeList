@@ -222,7 +222,8 @@ a {
 }
 
 #login,
-#cadastrar {
+#cadastrar,
+#perfil {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -234,49 +235,57 @@ a {
   gap: 20px;
 }
 #login h1,
-#cadastrar h1 {
+#cadastrar h1,
+#perfil h1 {
   font-family: "Quicksand";
   font-weight: 400;
   font-size: 2.618em;
   padding: 20px;
 }
 #login .form-group,
-#cadastrar .form-group {
+#cadastrar .form-group,
+#perfil .form-group {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 #login .form-group img,
-#cadastrar .form-group img {
+#cadastrar .form-group img,
+#perfil .form-group img {
   width: 24px;
   position: absolute;
   top: 8px;
   left: 8px;
 }
 #login input::placeholder,
-#cadastrar input::placeholder {
+#cadastrar input::placeholder,
+#perfil input::placeholder {
   color: #D9D9D9;
 }
 #login a,
-#cadastrar a {
+#cadastrar a,
+#perfil a {
   font-family: "Quicksand";
   color: #1CBAE1;
   padding-bottom: 20px;
 }
 #login label,
-#cadastrar label {
+#cadastrar label,
+#perfil label {
   font-size: 1em;
   color: #D9D9D9;
   font-family: "Quicksand";
 }
 #login .radio,
-#cadastrar .radio {
+#cadastrar .radio,
+#perfil .radio {
   display: flex;
   gap: 8px;
 }
 #login .radio label,
-#cadastrar .radio label {
+#cadastrar .radio label,
+#perfil .radio label {
   font-size: 0.718em;
 }
 
@@ -531,46 +540,6 @@ input[type=radio]:checked {
   resize: none;
   height: 160px;
   margin-bottom: 20px;
-}
-
-#edit-anime {
-  background-color: #1A1A1A;
-  margin-top: 60px;
-  border-radius: 4px;
-  margin-bottom: 40px;
-  padding: 40px;
-  font-family: "Quicksand";
-}
-#edit-anime .input {
-  display: inline-block;
-  width: fit-content;
-  text-indent: 8px;
-  height: auto;
-  border: none;
-  background: #302e2e;
-}
-#edit-anime select {
-  background: #1A1A1A;
-  color: #8C8C8C;
-  border: none;
-  background: #302e2e;
-}
-#edit-anime .title-name input {
-  font-size: 1.5em;
-}
-#edit-anime .anime-situation select {
-  color: #8C8C8C;
-}
-#edit-anime .anime-description textarea {
-  margin-top: 20px;
-  font-size: 1em;
-  resize: none;
-  width: 100%;
-  height: 200px;
-  border: none;
-  color: #D9D9D9;
-  font-family: "Poppins";
-  background: #302e2e;
 }
 
 footer {
