@@ -85,7 +85,7 @@ a {
 
 .background {
   background-image: url("../../public/img/bg.webp");
-  background-position: center;
+  background-size: cover;
   background-repeat: repeat;
 }
 
@@ -102,6 +102,17 @@ a {
   padding: 12px;
   color: #1A1A1A;
   font-size: 16px;
+}
+
+.warning {
+  background: #FF8C21;
+  color: #F5DFCA;
+}
+.warning p {
+  text-align: center;
+  font-family: "Quicksand";
+  font-weight: 500;
+  color: #1A1A1A;
 }
 
 .header-admin {
@@ -124,6 +135,9 @@ a {
 }
 .header-admin .user a {
   color: #ffffff;
+}
+.header-admin .user img {
+  margin-left: -8px;
 }
 
 [data-dropdown] {

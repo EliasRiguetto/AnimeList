@@ -1,3 +1,6 @@
+<?php
+include_once "../php/includes/session.php";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,7 +20,9 @@
       <form action="" id="perfil">
         <h1>Alterar Perfil</h1>
         <div class="form-group">
-          <input type="text" placeholder="Usuário" class="input">
+          <?php foreach ($usuario as $user): ?>
+            <input type="text" placeholder="Usuário" class="input" value="<?php echo (trim($user['username'])); ?>">
+          <?php endforeach; ?>
           <img src="../icon/user.svg" alt="Usuário">
         </div>
         <div class="form-group">
@@ -34,7 +39,9 @@
           <img src="../icon/password.svg" alt="Senha">
         </div>
         <div class="form-group">
-          <input type="password" placeholder="Confirmar Senha" class="input">
+          <?php foreach ($usuario as $user): ?>
+            <input type="password" placeholder="Confirmar Senha" class="input" value="<?php echo (trim($user['pw'])); ?>">
+          <?php endforeach ?>
           <img src="../icon/password.svg" alt="Senha">
         </div>
         <input type="submit" value="Atualizar" class="btn">

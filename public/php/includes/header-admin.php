@@ -1,3 +1,7 @@
+<?php
+require_once "session.php";
+require_once "user_search.php";
+?>
 <header id="header">
     <nav class="container header-admin">
         <div class="logo">
@@ -12,7 +16,10 @@
             </form>
             <div class="user flex">
                 <li data-dropdown class="flex">
-                    <a href="#"> Usuário </a>
+                    <a href="#"><?php foreach ($usuario as $user): ?>
+                            <p><?php echo htmlspecialchars($user['username']); ?></p>
+                        <?php endforeach; ?>
+                    </a>
                     <img src="./../icon/arrow.svg" alt="">
                     <ul class="dropdown">
                         <li>
@@ -22,7 +29,7 @@
                             <a href="../../public/usuario/perfil.php">Alterar perfil</a>
                         </li>
                         <li>
-                            <a href="sobre/regularizacao.html">Sair</a>
+                            <a href="../php/close.php">Sair</a>
                         </li>
                     </ul>
                 </li>
@@ -31,4 +38,7 @@
         </div>
     </nav>
     <script src="./../js/script.js"></script>
+    <?php
+    require_once("warning.php");
+    ?>
 </header>

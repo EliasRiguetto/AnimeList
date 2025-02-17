@@ -12,11 +12,14 @@
   <header id="header">
     <nav class="container">
       <div class="logo">
-        <a href="#">
+        <a href="../public/index.php">
           <img src="icon/logo.svg" alt="Logo do Site">
         </a>
       </div>
     </nav>
+    <?php
+    require_once "../public/php/includes/warning.php";
+    ?>
   </header>
   <main class="background" id="main">
     <section class="container formulario">
@@ -24,14 +27,14 @@
         <a href="#" class="btn">Entrar</a>
         <a href="cadastrar.php" class="btn dark">Cadastrar</a>
       </div>
-      <form action="" id="login">
+      <form action="php/login.php" id="login" method="post">
         <h1>Bem-Vindo!</h1>
         <div class="form-group">
-          <input type="text" placeholder="Usuário" class="input">
+          <input type="text" placeholder="Usuário" class="input" name="username">
           <img src="icon/user.svg" alt="Usuário">
         </div>
         <div class="form-group">
-          <input type="password" placeholder="Senha" class="input">
+          <input type="password" placeholder="Senha" class="input" name="pw">
           <img src="icon/password.svg" alt="Senha">
         </div>
         <input type="submit" value="Login" class="btn">

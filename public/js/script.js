@@ -44,3 +44,4 @@ function outsideClick(element, events, callback) {
     }
   }
 }
+
