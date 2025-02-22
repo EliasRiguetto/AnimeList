@@ -1,6 +1,6 @@
 <?php
 require_once "session.php";
-require_once "user_search.php";
+require_once(__DIR__ . "../../queries/user_search.php");
 ?>
 <header id="header">
     <nav class="container header-admin">
@@ -10,7 +10,7 @@ require_once "user_search.php";
             </a>
         </div>
         <div class="flex">
-            <form action="">
+            <form action="../queries/anime_search.php" method="post">
                 <input type="text" class="input" placeholder="Pesquisar">
                 <img src="./../icon/search.svg" alt="">
             </form>
@@ -29,7 +29,9 @@ require_once "user_search.php";
                             <a href="../../public/usuario/perfil.php">Alterar perfil</a>
                         </li>
                         <li>
-                            <a href="../php/close.php">Sair</a>
+                            <a href="../php/logoff.php">
+                                Sair
+                            </a>
                         </li>
                     </ul>
                 </li>
@@ -38,6 +40,7 @@ require_once "user_search.php";
         </div>
     </nav>
     <script src="./../js/script.js"></script>
+    <script src="./../js/modal.js"></script>
     <?php
     require_once("warning.php");
     ?>

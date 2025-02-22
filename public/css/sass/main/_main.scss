@@ -11,13 +11,5 @@
   .btn-options {
     display: flex;
     gap: 12px;
-
-    .dark {
-      background-color: $gray-3;
-
-      &:hover {
-        background-color: $gray-2;
-      }
-    }
   }
 }

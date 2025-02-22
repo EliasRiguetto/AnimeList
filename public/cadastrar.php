@@ -43,18 +43,17 @@
           </div>
         </div>
         <div class="form-group">
-          <input type="password" placeholder="Senha" class="input" name="pw1" id="pw1" required>
+          <input type="password" placeholder="Senha" class="input pass1" name="pw1" id="pw1" required>
           <img src="icon/password.svg" alt="Senha">
         </div>
         <div class="form-group">
-          <input type="password" placeholder="Confirmar Senha" class="input" name="pw2" id="pw2" required>
+          <input type="password" placeholder="Confirmar Senha" class="input pass2" name="pw2" id="pw2" required>
           <img src="icon/password.svg" alt="Senha">
         </div>
         <input type="submit" value="Cadastrar" class="btn">
       </form>
     </section>
   </main>
-  <script src="../public/js/check_password.js"></script>
 </body>
 
 </html>

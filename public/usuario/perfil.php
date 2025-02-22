@@ -17,30 +17,32 @@ include_once "../php/includes/session.php";
   ?>
   <main class="background" id="main">
     <section class="container formulario">
-      <form action="" id="perfil">
+      <form action="./../php/queries/user_update.php" id="perfil" method="POST">
         <h1>Alterar Perfil</h1>
         <div class="form-group">
           <?php foreach ($usuario as $user): ?>
-            <input type="text" placeholder="Usuário" class="input" value="<?php echo (trim($user['username'])); ?>">
+            <input type="text" placeholder="Usuário" class="input" value="<?php echo (trim($user['username'])); ?>" name="username">
           <?php endforeach; ?>
           <img src="../icon/user.svg" alt="Usuário">
         </div>
         <div class="form-group">
           <label for="">Sexo</label>
           <div class="radio">
-            <input type="radio" name="sexo" id="masc" checked>
+            <input type="radio" name="sexo" id="masc" value="M" checked>
             <label for="masc">Masculino</label>
-            <input type="radio" name="sexo" id="fem">
+            <input type="radio" name="sexo" id="fem" value="F">
             <label for="fem">Feminino</label>
           </div>
         </div>
         <div class="form-group">
-          <input type="password" placeholder="Senha" class="input">
+          <?php foreach ($usuario as $user): ?>
+            <input type="password" placeholder="Senha" class="input " value="<?php echo (trim($user['pw'])); ?>" name="pw1up">
+          <?php endforeach ?>
           <img src="../icon/password.svg" alt="Senha">
         </div>
         <div class="form-group">
           <?php foreach ($usuario as $user): ?>
-            <input type="password" placeholder="Confirmar Senha" class="input" value="<?php echo (trim($user['pw'])); ?>">
+            <input type="password" placeholder="Confirmar Senha" class="input" value="<?php echo (trim($user['pw'])); ?>" name="pw2up">
           <?php endforeach ?>
           <img src="../icon/password.svg" alt="Senha">
         </div>

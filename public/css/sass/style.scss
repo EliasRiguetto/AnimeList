@@ -1,8 +1,9 @@
 @import 'geral/reset';
 @import 'geral/variaveis';
 @import 'geral/header_admin';
+@import 'geral/modal';
 @import 'header/header';
-@import 'main/main';
+@import 'main/_main.scss';
 @import 'main/form';
 @import 'main/principal';
 @import 'main/pag_anime';

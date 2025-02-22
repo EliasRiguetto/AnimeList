@@ -1,8 +1,8 @@
 AnimeList.txt
 AnimeList.png
 .env
-/node_modules/
-/vendor/
+node_modules/
+vendor/
 *.log
 .DS_Store
 Thumbs.db

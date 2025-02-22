@@ -1,0 +1,48 @@
+.modal-container {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container.ativo {
+  display: flex;
+}
+
+.modal {
+  background: $gray-4;
+  min-width: 300px;
+  padding: 40px;
+  border: 12px solid $gray-3;
+  position: relative;
+
+  p {
+    color: $gray-1;
+    font-family: $font2;
+    font-size: $font-normal;
+    margin-bottom: 8px;
+
+  }
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.ativo .modal {
+  animation: modal .3s forwards;
+}

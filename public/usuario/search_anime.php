@@ -14,28 +14,29 @@ include_once "../php/includes/session.php";
 <body>
   <?php
   include_once('../php/includes/header-admin.php');
-  include_once('../php/includes/anime_search.php');
+  include_once('../php/queries/anime_search.php');
   ?>
   <main class="background" id="main">
     <section id="animes" class="container">
       <div class="header-anime">
         <h1>Animes <span><?= $total_animes; ?></span></h1>
         <div class="flex">
-          <form action="">
+          <form action="" method="POST">
             <p>Animes:</p>
-            <select name="" id="" class="form-select">
-              <option value="todos" class="form-option">Todos</option>
-              <option value="acompanhando" class="form-option">Acompanhando</option>
-              <option value="depois" class="form-option">Assistir depois</option>
-              <option value="concluidos" class="form-option">Concluidos</option>
+            <select name="anime_show" id="" class="form-select" onchange="this.form.submit()">
+              <option value="" <?= isset($_POST['anime_show']) && $_POST['anime_show'] == '' ? 'selected' : ' ' ?> class="form-option">Todos</option>
+              <option value="acompanhando" <?= isset($_POST['anime_show']) && $_POST['anime_show'] == 'acompanhando' ? 'selected' : ' ' ?> class="form-option">Acompanhando</option>
+              <option value="depois" <?= isset($_POST['anime_show']) && $_POST['anime_show'] == 'depois' ? 'selected' : ' ' ?> class="form-option">Assistir depois</option>
+              <option value="concluidos" <?= isset($_POST['anime_show']) && $_POST['anime_show'] == 'concluidos' ? 'selected' : ' ' ?> class="form-option">Concluídos</option>
             </select>
           </form>
-          <form action="">
+          <form action="" method="post">
             <p>Por ordem:</p>
-            <select name="" id="" class="form-select">
-              <option value="alfapetica" class="form-option">Alfabetica</option>
-              <option value="classificação" class="form-option">Classificação</option>
-              <option value="ano" class="form-option">Ano</option>
+            <select name="order" id="" class="form-select" onchange="this.form.submit()">
+              <option value="id_anime" <?= isset($_POST['order']) && $_POST['order'] == 'id_anime' ? 'selected' : ' ' ?> class="form-option">Inserção</option>
+              <option value="nome" <?= isset($_POST['order']) && $_POST['order'] == 'nome' ? 'selected' : ' ' ?> class="form-option">Alfabetica</option>
+              <option value="classificacao" <?= isset($_POST['order']) && $_POST['order'] == 'classificacao' ? 'selected' : ' ' ?> class="form-option">Classificação</option>
+              <option value="ano_lançamento" <?= isset($_POST['order']) && $_POST['order'] == 'ano_lançamento' ? 'selected' : ' ' ?> class="form-option">Ano</option>
             </select>
           </form>
         </div>
@@ -43,7 +44,7 @@ include_once "../php/includes/session.php";
       </div>
       <div class="grid">
         <?php foreach ($animes as $anime): ?>
-          <a href="anime.php" class="grid-item">
+          <a href="anime.php?id=<?= $anime['id_anime']; ?>" class="grid-item" ?>
             <div class="item-img">
               <img src="<?= $anime['imagem']; ?>" alt="<?= $anime['nome']; ?>" srcset="" class="image">
               <div class="overlay">

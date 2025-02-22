@@ -2,8 +2,8 @@
   background-color: $gray;
   margin-top: 60px;
   border-radius: $border;
-  margin-bottom: 40px;
   padding: 40px;
+  margin-bottom: 60px !important;
 }
 
 .info-anime {
@@ -23,7 +23,6 @@
   width: 100%;
 
   .title-name {
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,14 +31,13 @@
       font-size: $font-big;
       padding-right: 12px;
       font-weight: 500;
+      line-height: $font-normal;
+      max-width: 20ch;
     }
   }
 
   img {
     width: 36px;
-
-
-
   }
 
   .title-name-english p {
