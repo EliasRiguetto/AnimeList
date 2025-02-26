@@ -7,7 +7,7 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 348px);
+    grid-template-rows: repeat(4, 350px);
     gap: 40px;
     padding: 40px;
 
@@ -16,7 +16,7 @@
       gap: 40px;
 
       .item-img {
-        max-height: 348px;
+        max-height: 350px;
         width: 100%;
         position: relative;
         overflow: hidden;

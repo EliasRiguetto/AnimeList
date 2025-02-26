@@ -17,6 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $descricao = $_POST['anime_description'];
   $usuario = $user_id;
 
+  if (empty($imagem))
+    $imagem = 'https://wallpaper.forfun.com/fetch/76/762ac0f88e1157dc990f78a4cdf24e42.jpeg?h=600&r=0.5';
+
   $sql = "INSERT INTO anime (
                 nome, nome_ingles, classificacao, meu_status, temporada, episodios, anime_status, ano_lançamento, parei, imagem, descricao, usuario
             ) VALUES (

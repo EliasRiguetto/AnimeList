@@ -58,10 +58,10 @@ include_once "../php/queries/anime_info.php";
               <div class="anime-situation">
                 <p>
                   <select name="my_status" id="">
-                    <option value="Acompanhando">Acompanhando</option>
-                    <option value="Assistir depois">Assistir depois</option>
-                    <option value="Concluído">Concluído</option>
-                    <option value="Desisti">Desisti</option>
+                    <option value="Acompanhando" <?php echo ($anime['meu_status'] == "Acompanhando") ? "selected" : ""; ?>>Acompanhando</option>
+                    <option value="Assistir depois" <?php echo ($anime['meu_status'] == "Assistir depois") ? "selected" : ""; ?>>Assistir depois</option>
+                    <option value="Concluído" <?php echo ($anime['meu_status'] == "Concluído") ? "selected" : ""; ?>>Concluído</option>
+                    <option value="Desisti" <?php echo ($anime['meu_status']  == "Desisti") ? "selected" : ""; ?>>Desisti</option>
                   </select>
                 </p>
               </div>
@@ -69,30 +69,31 @@ include_once "../php/queries/anime_info.php";
                 <ul>
                   <li>Temporada: <span>
                       <select name="anime_season" id="">
-                        <option value="Sem temporada">Sem temporada</option>
-                        <option value="1º Temporada">1º Temporada</option>
-                        <option value="2º Temporada">2º Temporada</option>
-                        <option value="3º Temporada">3º Temporada</option>
-                        <option value="4º Temporada">4º Temporada</option>
-                        <option value="5º Temporada">5º Temporada</option>
-                        <option value="6º Temporada">6º Temporada</option>
-                        <option value="7º Temporada">7º Temporada</option>
-                        <option value="8º Temporada">8º Temporada</option>
-                        <option value="9º Temporada">9º Temporada</option>
-                        <option value="10º Temporada">10º Temporada</option>
-                        <option value="11º Temporada">11º Temporada</option>
-                        <option value="12º Temporada">12º Temporada</option>
-                        <option value="13º Temporada">13º Temporada</option>
-                        <option value="14º Temporada">14º Temporada</option>
-                        <option value="15º Temporada">15º Temporada</option>
-                        <option value="16º Temporada">16º Temporada</option>
-                        <option value="17º Temporada">17º Temporada</option>
-                        <option value="18º Temporada">18º Temporada</option>
-                        <option value="19º Temporada">19º Temporada</option>
-                        <option value="20º Temporada">20º Temporada</option>
-                        <option value="21º Temporada">21º Temporada</option>
-                        <option value="22º Temporada">22º Temporada</option>
-                        <option value="23º Temporada">23º Temporada</option>
+                        <option value="Sem temporada" <?php echo ($anime['temporada'] == "Sem temporada") ? "selected" : ""; ?>>Sem temporada</option>
+                        <option value="1º Temporada" <?php echo ($anime['temporada'] == "1º Temporada") ? "selected" : ""; ?>>1º Temporada</option>
+                        <option value="2º Temporada" <?php echo ($anime['temporada'] == "2º Temporada") ? "selected" : ""; ?>>2º Temporada</option>
+                        <option value="3º Temporada" <?php echo ($anime['temporada'] == "3º Temporada") ? "selected" : ""; ?>>3º Temporada</option>
+                        <option value="4º Temporada" <?php echo ($anime['temporada'] == "4º Temporada") ? "selected" : ""; ?>>4º Temporada</option>
+                        <option value="5º Temporada" <?php echo ($anime['temporada'] == "5º Temporada") ? "selected" : ""; ?>>5º Temporada</option>
+                        <option value="6º Temporada" <?php echo ($anime['temporada'] == "6º Temporada") ? "selected" : ""; ?>>6º Temporada</option>
+                        <option value="7º Temporada" <?php echo ($anime['temporada'] == "7º Temporada") ? "selected" : ""; ?>>7º Temporada</option>
+                        <option value="8º Temporada" <?php echo ($anime['temporada'] == "8º Temporada") ? "selected" : ""; ?>>8º Temporada</option>
+                        <option value="9º Temporada" <?php echo ($anime['temporada'] == "9º Temporada") ? "selected" : ""; ?>>9º Temporada</option>
+                        <option value="10º Temporada" <?php echo ($anime['temporada'] == "10º Temporada") ? "selected" : ""; ?>>10º Temporada</option>
+                        <option value="11º Temporada" <?php echo ($anime['temporada'] == "11º Temporada") ? "selected" : ""; ?>>11º Temporada</option>
+                        <option value="12º Temporada" <?php echo ($anime['temporada'] == "12º Temporada") ? "selected" : ""; ?>>12º Temporada</option>
+                        <option value="13º Temporada" <?php echo ($anime['temporada'] == "13º Temporada") ? "selected" : ""; ?>>13º Temporada</option>
+                        <option value="14º Temporada" <?php echo ($anime['temporada'] == "14º Temporada") ? "selected" : ""; ?>>14º Temporada</option>
+                        <option value="15º Temporada" <?php echo ($anime['temporada'] == "15º Temporada") ? "selected" : ""; ?>>15º Temporada</option>
+                        <option value="16º Temporada" <?php echo ($anime['temporada'] == "16º Temporada") ? "selected" : ""; ?>>16º Temporada</option>
+                        <option value="17º Temporada" <?php echo ($anime['temporada'] == "17º Temporada") ? "selected" : ""; ?>>17º Temporada</option>
+                        <option value="18º Temporada" <?php echo ($anime['temporada'] == "18º Temporada") ? "selected" : ""; ?>>18º Temporada</option>
+                        <option value="19º Temporada" <?php echo ($anime['temporada'] == "19º Temporada") ? "selected" : ""; ?>>19º Temporada</option>
+                        <option value="20º Temporada" <?php echo ($anime['temporada'] == "20º Temporada") ? "selected" : ""; ?>>20º Temporada</option>
+                        <option value="21º Temporada" <?php echo ($anime['temporada'] == "21º Temporada") ? "selected" : ""; ?>>21º Temporada</option>
+                        <option value="22º Temporada" <?php echo ($anime['temporada'] == "22º Temporada") ? "selected" : ""; ?>>22º Temporada</option>
+                        <option value="23º Temporada" <?php echo ($anime['temporada'] == "23º Temporada") ? "selected" : ""; ?>>23º Temporada</option>
+
                       </select>
                     </span></li>
                   <li>Episodios: <span>
@@ -100,10 +101,10 @@ include_once "../php/queries/anime_info.php";
                     </span></li>
                   <li>Status do anime: <span>
                       <select name="anime_status" id="">
-                        <option value="Em lançamento">Em lançamento</option>
-                        <option value="Concluído" ckecked>Concluído</option>
-                        <option value="Em breve">Em breve</option>
-                        <option value="Em hiato">Em hiato</option>
+                        <option value="Em lançamento" <?php echo ($anime['anime_status'] == "Em lançamento") ? "selected" : ""; ?>>Em lançamento</option>
+                        <option value="Concluído" <?php echo ($anime['anime_status']  == "Concluído") ? "selected" : ""; ?>>Concluído</option>
+                        <option value="Em breve" <?php echo ($anime['anime_status'] == "Em breve") ? "selected" : ""; ?>>Em breve</option>
+                        <option value="Em hiato" <?php echo ($anime['anime_status'] == "Em hiato") ? "selected" : ""; ?>>Em hiato</option>
                       </select>
                     </span></li>
                   <li>Ano de lançamento: <span>

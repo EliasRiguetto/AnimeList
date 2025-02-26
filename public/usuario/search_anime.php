@@ -26,8 +26,8 @@ include_once "../php/includes/session.php";
             <select name="anime_show" id="" class="form-select" onchange="this.form.submit()">
               <option value="" <?= isset($_POST['anime_show']) && $_POST['anime_show'] == '' ? 'selected' : ' ' ?> class="form-option">Todos</option>
               <option value="acompanhando" <?= isset($_POST['anime_show']) && $_POST['anime_show'] == 'acompanhando' ? 'selected' : ' ' ?> class="form-option">Acompanhando</option>
-              <option value="depois" <?= isset($_POST['anime_show']) && $_POST['anime_show'] == 'depois' ? 'selected' : ' ' ?> class="form-option">Assistir depois</option>
-              <option value="concluidos" <?= isset($_POST['anime_show']) && $_POST['anime_show'] == 'concluidos' ? 'selected' : ' ' ?> class="form-option">Concluídos</option>
+              <option value="Assistir depois" <?= isset($_POST['anime_show']) && $_POST['anime_show'] == 'Assistir depois' ? 'selected' : ' ' ?> class="form-option">Assistir depois</option>
+              <option value="concluído" <?= isset($_POST['anime_show']) && $_POST['anime_show'] == 'concluído' ? 'selected' : ' ' ?> class="form-option">Concluídos</option>
             </select>
           </form>
           <form action="" method="post">
@@ -43,16 +43,20 @@ include_once "../php/includes/session.php";
 
       </div>
       <div class="grid">
-        <?php foreach ($animes as $anime): ?>
-          <a href="anime.php?id=<?= $anime['id_anime']; ?>" class="grid-item" ?>
-            <div class="item-img">
-              <img src="<?= $anime['imagem']; ?>" alt="<?= $anime['nome']; ?>" srcset="" class="image">
-              <div class="overlay">
-                <div class="text"><?= $anime['nome']; ?></div>
+        <?php if (count($animes) > 0): ?>
+          <?php foreach ($animes as $anime): ?>
+            <a href="anime.php?id=<?= $anime['id_anime']; ?>" class="grid-item">
+              <div class="item-img">
+                <img src="<?= $anime['imagem']; ?>" alt="<?= $anime['nome']; ?>" class="image">
+                <div class="overlay">
+                  <div class="text"><?= $anime['nome']; ?></div>
+                </div>
               </div>
-            </div>
-          </a>
-        <?php endforeach; ?>
+            </a>
+          <?php endforeach; ?>
+        <?php else: ?>
+          <p>Nenhum anime encontrado para a pesquisa.</p>
+        <?php endif; ?>
       </div>
       <div class="pagination">
         <a href="#" class="prev">&laquo;</a>

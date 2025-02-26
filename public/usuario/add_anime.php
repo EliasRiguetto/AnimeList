@@ -50,7 +50,7 @@ include_once "../php/includes/session.php";
         <div class="flex">
           <div class="form-group">
             <label for="anime-episode">Episodios: </label>
-            <input type="number" value="20" class="input" name="anime_episode" id="anime-episode">
+            <input type="number" value="24" class="input" name="anime_episode" id="anime-episode">
           </div>
           <div class="form-group">
             <label for="anime-season">Temporada</label>

@@ -10,8 +10,8 @@ require_once(__DIR__ . "../../queries/user_search.php");
             </a>
         </div>
         <div class="flex">
-            <form action="../queries/anime_search.php" method="post">
-                <input type="text" class="input" placeholder="Pesquisar">
+            <form action="" method="post">
+                <input type="text" class="input" placeholder="Pesquisar" name="search">
                 <img src="./../icon/search.svg" alt="">
             </form>
             <div class="user flex">
